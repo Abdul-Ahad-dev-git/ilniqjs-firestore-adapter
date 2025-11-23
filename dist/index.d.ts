@@ -1,4 +1,5 @@
 export { FireStoreDBAdapter, FSDB } from "./adapter/FireStoreDBAdapter";
+export { DatabaseManager } from "./adapter/DatabaseManager";
 export { ConnectionFactory } from "./config/connection.factory";
 export { mergeOptions, DEFAULT_ADAPTER_OPTIONS } from "./config/adapter.options";
 export type { AdapterOptions } from "./config/adapter.options";
