@@ -1,31 +1,36 @@
+# Source files
+*.ts
+!*.d.ts
+tsconfig.json
 
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Tests
+tests/
+**/*.test.ts
+**/*.spec.ts
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+# Examples
+examples/
 
+# Development
+.git/
+.github/
+.vscode/
+.idea/
 
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*
-
-
-# typescript
+# Build
+node_modules/
 *.tsbuildinfo
 
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.*
+*.local
+
+# Misc
+.DS_Store
+*.swp
+*.swo
