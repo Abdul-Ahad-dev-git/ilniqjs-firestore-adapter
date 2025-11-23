@@ -1,0 +1,65 @@
+{
+  "name": "@ilniqjs/firestore-adapter",
+  "version": "1.0.0",
+  "description": "Firestore database adapter for serverless applications with advanced relational capabilities, connection pooling, automatic retries, and 100+ operations",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "firestore",
+    "firebase",
+    "database",
+    "adapter",
+    "orm",
+    "serverless",
+    "cloud-functions",
+    "vercel",
+    "aws-lambda",
+    "google-cloud",
+    "relational",
+    "enterprise",
+    "typescript",
+    "connection-pooling",
+    "retry-logic",
+    "batch-operations",
+    "transactions",
+    "migrations",
+    "nosql",
+    "database-adapter"
+  ],
+  "author": {
+    "name": "Abdul Ahad"
+  
+    
+  },
+  "license": "MIT",
+
+ 
+ 
+  "peerDependencies": {
+    "firebase-admin": ">=11.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "firebase-admin": "^12.0.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

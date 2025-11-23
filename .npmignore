@@ -1,0 +1,36 @@
+# Source files
+*.ts
+!*.d.ts
+tsconfig.json
+
+# Tests
+tests/
+**/*.test.ts
+**/*.spec.ts
+
+# Examples
+examples/
+
+# Development
+.git/
+.github/
+.vscode/
+.idea/
+
+# Build
+node_modules/
+*.tsbuildinfo
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.*
+*.local
+
+# Misc
+.DS_Store
+*.swp
+*.swo
