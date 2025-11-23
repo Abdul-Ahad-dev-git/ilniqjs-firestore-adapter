@@ -1,4 +1,4 @@
-# 🔥 @zyljs/firestore-adapter
+# 🔥 @ilniqjs/firestore-adapter
 
 > Enterprise-grade Firestore database adapter for serverless applications with **multi-database management**, 100+ operations, connection pooling, automatic retries, and advanced relational capabilities.
 
@@ -34,7 +34,7 @@
 ## 📦 Installation
 
 ```bash
-npm install @zyljs/firestore-adapter firebase-admin
+npm install @ilniqjs/firestore-adapter firebase-admin
 ```
 
 ---
@@ -44,7 +44,7 @@ npm install @zyljs/firestore-adapter firebase-admin
 ### **Single Database**
 
 ```typescript
-import { FireStoreDBAdapter } from "@zyljs/firestore-adapter";
+import { FireStoreDBAdapter } from "@ilniqjs/firestore-adapter";
 
 // Initialize
 const db = new FireStoreDBAdapter({
@@ -62,7 +62,7 @@ await db.update("users", userId, { age: 26 });
 ### **Multiple Databases (Recommended)**
 
 ```typescript
-import { DatabaseManager } from "@zyljs/firestore-adapter";
+import { DatabaseManager } from "@ilniqjs/firestore-adapter";
 
 // Create multiple database instances
 const mainDB = DatabaseManager.createInstance("main", {
@@ -97,7 +97,7 @@ The `DatabaseManager` allows you to manage multiple Firestore projects, similar 
 #### **Create Instances**
 
 ```typescript
-import { DatabaseManager } from "@zyljs/firestore-adapter";
+import { DatabaseManager } from "@ilniqjs/firestore-adapter";
 
 // Create instances
 const usersDB = DatabaseManager.createInstance("users", {
@@ -600,7 +600,7 @@ const validation = await db.validateMigration("users", (doc) => {
 
 ```typescript
 // db/config.ts
-import { DatabaseManager } from "@zyljs/firestore-adapter";
+import { DatabaseManager } from "@ilniqjs/firestore-adapter";
 
 export function initializeDatabases() {
   const env = process.env.NODE_ENV || "development";
@@ -641,7 +641,7 @@ export const stagingDB = DatabaseManager.getInstance("staging");
 
 ```typescript
 // services/tenant.service.ts
-import { DatabaseManager } from "@zyljs/firestore-adapter";
+import { DatabaseManager } from "@ilniqjs/firestore-adapter";
 
 export class TenantService {
   connectTenant(tenantId: string, config: any) {
@@ -676,7 +676,7 @@ await acmeDB.create("users", { name: "John Doe" });
 
 ```typescript
 // Each service manages its own database
-import { DatabaseManager } from "@zyljs/firestore-adapter";
+import { DatabaseManager } from "@ilniqjs/firestore-adapter";
 
 // User service
 const usersDB = DatabaseManager.createInstance("users", {
@@ -712,7 +712,7 @@ await productsDB.create("products", { name: "Widget", price: 29.99 });
 ### **Full Configuration Options**
 
 ```typescript
-import { FireStoreDBAdapter } from "@zyljs/firestore-adapter";
+import { FireStoreDBAdapter } from "@ilniqjs/firestore-adapter";
 
 const db = new FireStoreDBAdapter({
   // Firebase credentials (required)
@@ -883,7 +883,7 @@ Works on all platforms:
 ## 🏥 Health Monitoring
 
 ```typescript
-import { DatabaseManager } from "@zyljs/firestore-adapter";
+import { DatabaseManager } from "@ilniqjs/firestore-adapter";
 
 // Health check endpoint
 app.get("/health", (req, res) => {
@@ -911,7 +911,7 @@ app.get("/db/info", (req, res) => {
 ## 🧪 Testing
 
 ```typescript
-import { DatabaseManager } from "@zyljs/firestore-adapter";
+import { DatabaseManager } from "@ilniqjs/firestore-adapter";
 
 describe("User Service", () => {
   beforeAll(() => {
